@@ -3,3 +3,8 @@ img {
     max-width: 400px;
     border-radius: 10px;
 }
+
+table, tr, td, th {
+    border-collapse: collapse;
+    border: 1px solid;
+}
