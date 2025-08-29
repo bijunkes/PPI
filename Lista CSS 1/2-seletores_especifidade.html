@@ -22,6 +22,15 @@
    <!--item 6--> <li           class="churras">Carne</li>
    <!--item 7--> <li           class="churras">Linguiça</li>
    <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
-   </ol>   
+   </ol>
 </body>
 </html>
+
+<!-- Regra 1: Aplica a cor de texto vermelha em todos os elementos <li>. Essa regra afeta visualmente todos os itens da lista, menos aqueles com regras de maior especificidade -->
+<!-- Regra 2: Aplica a cor de texto verde em todos os elementos com classe "churras". Essa regra afeta visualmente todos os itens da lista com essa classe, menos aqueles com regras de maior especificidade -->
+<!-- Regra 3: Aplica a cor de texto cinza em todos os elementos com classe "fruta". Essa regra afeta visualmente todos os itens da lista com essa classe, menos aqueles com regras de maior especificidade -->
+<!-- Regra 4: Aplica a cor de texto preta ao segundo elemento <li> ou qualquer <li> com classe "churras" que venha após outro <li>. Essa regra afeta visualmente todos os itens da lista com essa classe, menos aqueles com regras de maior especificidade -->
+<!-- Regra 5: Aplica a cor de texto magenta a todos os elementos com classe "churras" que tenham atributo draggable="true". Essa regra afeta visualmente todos os itens da lista com essa classe, menos aqueles com regras de maior especificidade -->    
+<!-- Regra 6: Aplica a cor de texto azul a todos os elementos com os ids lip1, lip2 e lip3. Essa regra afeta visualmente todos os itens da lista com essa classe, menos aqueles com regras de maior especificidade -->
+<!-- Regra 7: Aplica a cor de texto laranja a todos os elementos com o id lip3 com classe "fruta". Essa regra afeta visualmente todos os itens da lista com essa classe, menos aqueles com regras de maior especificidade -->
+<!-- Regra 8: Aplica a cor de texto roxa a um elemento <li> que seja filho direto de um <ol> e que tenha a classe "churras" e o id lip5. Essa regra afeta visualmente todos os itens da lista com essa classe, menos aqueles com regras de maior especificidade -->
