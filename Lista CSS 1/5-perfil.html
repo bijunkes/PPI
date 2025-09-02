@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        body {
+            display: flex;
+            height: 100vh;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            border: 0;
+        }
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        #parte1 {
+            width: 50vh;
+            background-color: rgb(78, 78, 78);
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        #areaImagem {
+            display: flex;
+            margin-top: 4vh;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            padding: 0vh 10vh 0vh 10vh;
+            width: 34vh;
+            height: 34vh;
+            border-radius: 100%;
+        }
+        #areaTexto1 {
+            display: flex;
+            padding: 0 3vh 0 3vh;
+            height: 100%;
+            flex-direction: column;
+            
+        }
+        .maior {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 2vh;
+            margin-top: 2vh;
+            padding: 0 0 1vh 0;
+            border-bottom: 2px solid white;
+        }
+        .chave {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .valor {
+            font-size: 18px;
+            margin-bottom: 2vh;
+        }
+        #parte2{
+            width: 100%;
+            height: 100%;
+            padding: 4vh 6vh 4vh 6vh;
+        }
+        #nome {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 3vh;
+        }
+        .quebraLinha {
+            border-bottom: 2px solid rgb(199, 199, 199);
+        }
+        @keyframes subir {
+            0% {
+
+            }
+            100% {
+                top: 0px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div id="parte1">
+            <div id="areaImagem">
+                <img src="tl.webp" alt>
+            </div>
+            <div id="areaTexto1">
+                <p class="maior">Pessoal</p>
+                <p class="chave">Nome</p>
+                <p class="valor">Joana Barbosa</p>
+                <p class="chave">Endereço</p>
+                <p class="valor">Rua de Paz, 250<br>7100-011 Lisboa</p>
+                <p class="chave">Número de telefone</p>
+                <p class="valor">9630002121</p>
+                <p class="chave">Email</p>
+                <p class="valor">exemplos@cvmaker.pt</p>
+                <p class="maior">Interesses</p>
+            </div>
+        </div>
+        <div id="parte2">
+            <div id="nome">Joana Barbosa</div>
+            <div class="quebraLinha"></div>
+        </div>
+    </body>
+</html>

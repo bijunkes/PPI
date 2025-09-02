@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+        body {
+            min-height: 100vh;    
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            display: inline-block;
+        }
+        #d1 {
+            background-color: red;
+            
+        }
+        #d2 {
+            background-color: yellow;
+            position: fixed;
+            right: 0px;
+        }
+        #d3 {
+            background-color: green;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+        
+        }
+        #d4 {
+            background-color: blue;
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+        }
+        #d5 {
+            background-color: magenta;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+            animation: subir 1s none 0s infinite;
+        }
+        @keyframes subir {
+            0% {
+
+            }
+            100% {
+                top: 0px;
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div id="d1">box1</div>
+        <div id="d4">box4</div>
+        <div id="d3">box3</div>
+        <div id="d2">box2</div>
+        <div id="d5">box5</div>
+
+    </body>
+</html>
+<!--  -->
