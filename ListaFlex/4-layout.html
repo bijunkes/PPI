@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         body {
-           margin: 0;
+            margin: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            width: 100vh;
             height: 100vh;
+            gap: 2vh;
         }
+
         .fechado {
             display: flex;
             width: 8vh;
@@ -26,36 +29,52 @@
             flex-direction: column;
             align-items: center;
         }
+
+        .aberto {
+            display: flex;
+            width: 80vh;
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 40px;
+            justify-content: end;
+            flex-direction: column;
+            padding: 2vh;
+        }
+
         .circulo {
             background-color: white;
             width: 5vh;
             height: 5vh;
-            margin-bottom: 2vh;
+            margin-bottom: 1vh;
             border-radius: 100%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            
+            background-size: 60% 60%;
         }
     </style>
 </head>
+
 <body>
-    <div class="fechado"
-    style="background-image: url(floresta.jpeg);">
+    <div class="fechado" style="background-image: url(floresta.jpg);">
+        <div class="circulo" style="background-image: url(icon.png)"></div>
+    </div>
+    <div class="aberto" style="background-image: url(neve.jpg);">
+        <div class="circulo" style="background-image: url(floco.png)"
+        ></div>
+    </div>
+    <div class="fechado" style="background-image: url(saara.webp);">
         <div class="circulo"
-        style="background-image: url(icon.png);"></div>
+        style="background-image: url(sino.png)"></div>
     </div>
-    <div class="aberto">
-        <div class="circulo"></div>
+    <div class="fechado" style="background-image: url(savana.webp);">
+        <div class="circulo" style="background-image: url(gota.png)"></div>
     </div>
-    <div class="fechado">
-        <div class="circulo"></div>
-    </div>
-    <div class="fechado">
-        <div class="circulo"></div>
-    </div>
-    <div class="fechado">
-        <div class="circulo"></div>
+    <div class="fechado" style="background-image: url(tundra.webp);">
+        <div class="circulo" style="background-image: url(engine.png)"></div>
     </div>
 </body>
+
 </html>
