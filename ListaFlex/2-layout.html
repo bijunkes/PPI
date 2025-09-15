@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: gainsboro;
+            padding: 0;
+        }
+        #container {
+            height: 100vh;
+            width: 60vh;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        #titulo {
+            color: gainsboro;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            text-align: center;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+        #inputs {
+            width: 100%;
+            padding: 3vh;
+            
+        }
+        input {
+            border: 0;
+            width: 90%;
+            height: 5vh;
+            background-color: gainsboro;
+            margin-bottom: 3vh;
+        }
+        #usuario {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15vh;
+        }
+        #circulo {
+            background-color: gainsboro;
+            width: 18vh;
+            height: 18vh;
+            border-radius: 100%;
+            margin-bottom: 3vh;
+        }
+        #corpo {
+            width: 26vh;
+            height: 5vh;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="titulo">Company Logo</div>
+        <div id="inputs">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+        <div id="usuario">
+            <div id="circulo"></div>
+            <div id="corpo"></div>
+        </div>
+    </div>
+</body>
+</html>
