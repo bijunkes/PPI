@@ -10,7 +10,7 @@
             margin: 0;
             box-sizing: border-box;
         }
-        @media screen and (min-width: 916px) and (min-height: 873px) {
+        @media screen and (max-width: 916px) and (max-height: 873px) {
             body {
                 display: grid;
                 grid-template-areas: 
@@ -21,7 +21,7 @@
                     "f f f f f";
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
-                height: 916px;
+                height: auto;
                 height: 873px;
                 font-size: 20px;
             }
@@ -65,7 +65,63 @@
                 background-color: blue;
             }
         }
-        
+        @media screen and (max-width: 437px) and (max-height: 873px) {
+            body {
+                display: grid;
+                grid-template-areas: 
+                    "h"
+                    "b"
+                    "l"
+                    "m"
+                    "r"
+                    "lc"
+                    "f";
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.5fr 0.5fr 0.5fr 5fr 0.5fr 0.5fr 0.5fr;
+                height: auto;
+                height: 873px;
+                font-size: 20px;
+            }
+            #h, #b, #m, #f {
+                display: flex;
+                margin: 0.5vh;
+                padding: 2vh;
+                justify-content: center;
+            }
+            #l, #r, #lc {
+                margin: 0.5vh;
+                padding: 2vh;
+            }
+            #h {
+                grid-area: h;
+                background-color: yellow;
+            }
+            #l {
+                grid-area: l;
+                background-color: green;
+            }
+            #b {
+                grid-area: b;
+                background-color: red;
+            }
+            #m {
+                grid-area: m;
+                background-color: blue;
+                align-items: center;
+            }
+            #lc {
+                grid-area: lc;
+                background-color: green;
+            }
+            #r {
+                grid-area: r;
+                background-color: yellow;
+            }
+            #f {
+                grid-area: f;
+                background-color: blue;
+            }
+        }
     </style>
 </head>
 <body>
