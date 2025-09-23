@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            html {
+                &:hover {
+                animation: girar 3s linear infinite;
+            }
+            }
         body {
             margin: 0;
-            justify-content: center;
-            align-items: center;
             padding: 0;
             height: 100vh;
             width: 100vh;
-
-            &:hover {
-                animation: girar 1s none 0s infinite;
-            }
-            
         }
         body div {
             width: 10vh;
@@ -27,7 +25,6 @@
         #b1 {
             background-color: red;
             position: fixed;
-            
         }
         #b2 {
             background-color: lightskyblue;
@@ -54,19 +51,19 @@
 
         @keyframes girar {
             0% {
-                
+                transform: rotate(0deg);
             }
             100% {
                 transform: rotate(360deg);
             }
         }
     </style>
-</head>
-<body>
-    <div id="b1"></div>
-    <div id="b2"></div>
-    <div id="b3"></div>
-    <div id="b4"></div>
-    <div id="b5"></div>
-</body>
+    </head>
+    <body>
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+        <div id="b4"></div>
+        <div id="b5"></div>
+    </body>
 </html>

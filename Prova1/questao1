@@ -4,4 +4,7 @@ envolvidas nesse processo, incluindo a resolução de nomes de domínio, a troca
 cliente e servidor, e os principais protocolos utilizados. Certifique-se de mencionar tecnologias como
 DNS, HTTP/HTTPS, TCP/IP, entre outras relevantes no processo.
 
-Quando um usuário insere a URL no navegador, é feito a resolução do nome de domínio pelo DNS (Domínio do site) que faz a conversão entre a URL e o endereço IP do site. Com isso feito, o navegador faz uma conexão TCP/IP com o servidor web que corresponde ao endereço IP identificado. Com a conexão feita, o navegador envia uma requisição HTTP ou HTTPS ao servidor, pedindo a entrega da página. O servidor processa a requisição e envia uma resposta HTTP que contém os arquivos da página, arquivos como html, css, javascript... Por fim, o navegador recebe os arquivos solicitados e os renderiza, assim o usuário entre em contato com o site.
+R: Quando um usuário insere a URL no navegador, é feito a resolução do nome de domínio pelo DNS (Domínio do site) que faz a conversão entre a URL e o endereço IP do site. Com isso feito, o 
+avegador faz uma conexão TCP/IP com o servidor web que corresponde ao endereço IP identificado. Com a conexão feita, o navegador envia uma requisição HTTP ou HTTPS ao servidor, pedindo a 
+entrega da página. O servidor processa a requisição e envia uma resposta HTTP que contém os arquivos da página, arquivos como html, css, javascript... Por fim, o navegador recebe os arquivos 
+solicitados e os renderiza, assim o usuário entre em contato com o site.
