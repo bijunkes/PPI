@@ -1,0 +1,7 @@
+Explique detalhadamente o que ocorre durante o acesso a uma página na web, desde o momento
+em que o usuário digita a URL no navegador até a completa exibição do site. Descreva todas as etapas
+envolvidas nesse processo, incluindo a resolução de nomes de domínio, a troca de mensagens entre
+cliente e servidor, e os principais protocolos utilizados. Certifique-se de mencionar tecnologias como
+DNS, HTTP/HTTPS, TCP/IP, entre outras relevantes no processo.
+
+Quando um usuário insere a URL no navegador, é feito a conversão entre a URL e o DNS (Domínio do site).
