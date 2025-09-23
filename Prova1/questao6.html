@@ -1,35 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
         body {
-            display: flex;
             margin: 0;
-            border: 0;
-        }
-        b1 {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 20vh;
-            height: 10vh;
+            padding: 0;
+            height: 100vh;
+            gap: 0.5vh;
+            flex-direction: row;
         }
-        circulo {
+
+        #b1  {
+            display: flex;
+            width: 16vh;
+            height: 10vh;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+        #circulo1 {
+            background-color: red;
             width: 5vh;
             height: 5vh;
             border-radius: 100%;
+        }
+
+        #b2  {
+            display: flex;
+            width: 16vh;
+            height: 10vh;
+            flex-direction: column;
+        }
+        #p1 {
+            width: 100%;
+            height: calc(100% / 3);
+            background-color: blue;
+        }
+        #p2 {
+            width: 100%;
+            height: calc(100% / 3);
+        }
+        #p3 {
+            width: 100%;
+            height: calc(100% / 3);
+            background-color: red;
+        }
+        
+        #b3  {
+            display: flex;
+            width: 15vh;
+            height: 9vh;
+            border-bottom-right-radius: 100%;
+        }
+        #m1 {
+            height: 100%;
+            width: calc(100% / 3);
+            background-color: green;
+        }
+        #m2 {
+            height: 100%;
+            width: calc(100% / 3);
+        }
+        #m3 {
+            height: 100%;
+            width: calc(100% / 3);
             background-color: red;
         }
     </style>
-</head>
-<body>
-    <div id="b1">
-        <div id="circulo"></div>
-    </div>
-    <div id="b2"></div>
-    <div id="b3"></div>
-</body>
+    </head>
+    <body>
+        <div id="b1">
+            <div id="circulo1"></div>
+        </div>
+        <div id="b2">
+            <div id="p1"></div>
+            <div id="p2"></div>
+            <div id="p3"></div>
+        </div>
+        <div id="b3">
+            <div id="m1"></div>
+            <div id="m2"></div>
+            <div id="m3"></div>
+        </div>
+    </body>
+
 </html>
