@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+</head>
+<body>
+    <h1>O que é JavaScript?</h1>
+    <p id="p1">O JavaScript é uma linguagem de programação criada em 1995 por Brendan Eich com o objetivo de permitir interatividade nas páginas da web, como validação de formulários e manipulação de elementos da interface diretamente no navegador, algo que HTML e CSS não podiam fazer sozinhos.</p>
+    <p id="p2">Inicialmente executado apenas no navegador, o JavaScript hoje também pode ser executado no servidor, por exemplo, com o Node.js, permitindo o desenvolvimento completo de aplicações web com uma única linguagem.</p>
+    <p id="p3">No navegador, o JavaScript é executado dentro de uma sandbox, um ambiente isolado que limita o acesso direto ao sistema do usuário por questões de segurança.</p>
+    <p id="p4">Dentro desse ambiente, o JavaScript tem acesso a objetos globais como document, que representa a estrutura HTML da página; console, usado para registrar mensagens de depuração; e alert, que exibe caixas de diálogo para interações simples com o usuário.</p>
+    <p id="hora"></p>
+</body>
+
+<script>
+    alert("Página iniciada")
+    console.log("Hello World")
+    var data = new Date ()
+var hora =  data.getHours ()
+var minuto = data.getMinutes ()
+var segundos = data.getSeconds ()
+    document.getElementById("hora").innerHTML = `${hora}:${minuto}:${segundos}`;
+</script>
+</html>

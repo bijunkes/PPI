@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pstring"></p>
+    <p id="pnumero"></p>
+    <p id="pbooleano"></p>
+    <p id="pindefinido"></p>
+    <p id="pnulo"></p>
+    <p id="pobjeto"></p>
+    <p id="parray"></p>
+    <p id="exemplo"></p>
+    <p id="explicacao"></p>
+</body>
+<script>
+    var string = "Oi";
+    var numero = 1;
+    var booleano = false;
+    var indefinido = undefined;
+    var nulo = null;
+    var objeto = {chave: "valor"};
+    var array = [0, 1, 2];
+
+    document.getElementById("pstring").textContent = typeof string;
+    document.getElementById("pnumero").textContent = typeof numero;
+    document.getElementById("pbooleano").textContent = typeof booleano;
+    document.getElementById("pindefinido").textContent = typeof indefinido;
+    document.getElementById("pnulo").textContent = typeof nulo;
+    document.getElementById("pobjeto").textContent = typeof objeto;
+    document.getElementById("parray").textContent = typeof array;
+
+    console.log(string + numero, booleano * numero);
+
+    document.getElementById("exemplo").innerText = string + numero, booleano * numero + "A String é somada com 1, o boolean e o numero são multiplicados, como o boolean é false, torna-se 0, 0 x 1 = 0";
+    document.getElementById("explicacao").innerText = "A String é somada com 1, o boolean e o numero são multiplicados, como o boolean é false, torna-se 0, 0 x 1 = 0";
+</script>
+</html>
