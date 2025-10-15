@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="number" id="inicio">
+        <input type="number" id="fim">
+        <button onclick="ehPrimo()">
+            Verificar
+        </button>
+        <div id="resultadoPrimos"></div>
+    </body>
+    <script>
+    function ehPrimo() {
+        const inicio = parseInt(document.getElementById("inicio").value);
+        const fim = parseInt(document.getElementById("fim").value);
+        const resultado = document.getElementById("resultadoPrimos");
+        let numeros = [];
+
+        if(inicio <= fim) {
+            for (let i = inicio; i <= fim; i++){
+                if (i < 2) continue;
+
+                let primo = true;
+
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0){
+                        primo = false;
+                        break;
+                    }
+                }
+
+                if (primo) {
+                    numeros.push(i);
+                }
+            }
+            resultado.textContent = numeros;
+        }
+    }
+</script>
+</html>
