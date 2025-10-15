@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="palavra">
+    <button id="verificar" onclick="ehPalindromo()">Verificar</button>
+    <div id="resultado"></div>
+</body>
+<script>
+    function ehPalindromo() {
+        const palavra = document.getElementById("palavra").value;
+        const resultado = document.getElementById("resultado");
+
+        let letras = palavra.split("");
+        let contrario = letras.slice(0).reverse();
+        console.log(letras);
+        console.log(contrario);
+
+        if(JSON.stringify(letras) === JSON.stringify(contrario)) {
+            resultado.textContent = "É um palíndromo";
+        } else {
+            resultado.textContent = "Não é um palíndromo";
+        }
+    }
+</script>
+</html>
