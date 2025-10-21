@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Captude de Teclas do Teclado</h1>
+    <div id="saida"></div>
+</body>
+<script>
+    const saida = document.getElementById("saida");
+    window.addEventListener("keydown", (e) => {
+        saida.textContent += e.key;
+        console.log(e.key);
+    });
+</script>
+</html>
