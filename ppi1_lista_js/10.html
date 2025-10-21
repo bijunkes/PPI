@@ -12,14 +12,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 200vh;
+            width: 100vw;
             height: 100vh;
+            background-color: cadetblue;
         }
         #calculadora {
             display: flex;
             width: 30vh;
             height: 30vh;
             flex-direction: column;
+            border-radius: 1vh;
+            overflow: hidden;
         }
         #resultado {
             display: flex;
@@ -41,7 +44,7 @@
                 "quatro cinco seis igual"
                 "um dois tres igual"
                 "zero ponto apagar igual";
-            height: 4vh;
+            flex: 1;
         }
         #teclado div {
             font-family: Arial, Helvetica, sans-serif;
@@ -51,15 +54,20 @@
             align-items: center;
             cursor: pointer;
             padding: 1vh;
+            background-color: white;
         }
 
-        #teclado #adicao, #subtracao, #multiplicacao, #divisao {
+        #teclado #adicao,
+        #teclado #subtracao,
+        #teclado #multiplicacao,
+        #teclado #divisao {
             background-color: lightgray;
         }
 
         #teclado #igual {
             background-color: lightsalmon;
         }
+
 
         #adicao { grid-area: adicao; }
         #subtracao { grid-area: subtracao; }
@@ -88,7 +96,7 @@
             <div id="teclado">
                 <div id="adicao">+</div>
                 <div id="subtracao">-</div>
-                <div id="multiplicacao">x</div>
+                <div id="multiplicacao">*</div>
                 <div id="divisao">/</div>
 
                 <div id="sete">7</div>
@@ -113,7 +121,39 @@
 
     </body>
     <script>
+        const resultado = document.getElementById("resultado");
+        const botoes = document.querySelectorAll("#teclado div");
+        let expressao = "";
+
+        botoes.forEach(b => {
+            b.addEventListener("click", () => {
+                const valor = b.innerText;
+
+                switch (valor) {
+                    case "AC":
+                        expressao = "";
+                        break;
+                        
+                    case "=" :
+                        calcular();
+                        break;
+
+                    default: 
+                        expressao += valor;
+                        break;
+                }
+                resultado.innerText = expressao || "0";
+            });
+        });
+
         function calcular() {
+            try {
+                const resultado = eval(expressao);
+                expressao = resultado.toString();
+                resultado.innerText = expressao;
+            } catch (e) {
+                expressao = "";
+            }
         }
     </script>
 </html>
