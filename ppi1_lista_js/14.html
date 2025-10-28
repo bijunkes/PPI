@@ -12,7 +12,23 @@
 <script>
     const saida = document.getElementById("saida");
     window.addEventListener("keydown", (e) => {
-        saida.textContent += e.key;
+        e.preventDefault();
+
+        if(e.key === "Backspace") {
+            const teclas = saida.querySelectorAll(".tecla");
+            if (teclas.length > 0) {
+                teclas[teclas.length - 1].remove();
+            }
+            return;
+        }
+
+        if (e.key.length > 1) return;
+
+        const span = document.createElement("span");
+        span.classList.add("tecla");
+        span.innerHTML = `${e.key}<span class="codigo"> (${e.code})</span>`;
+        saida.appendChild(span);
+        
         console.log(e.key);
     });
 </script>
