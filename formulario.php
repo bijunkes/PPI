@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,28 @@
 </head>
 <body>
     <h2>Formulário de Cadastro</h2>
-    <form action="" method="get">
+    <?php
+        if(isset($_SESSION['username'])){
+            echo "<p>usuário logado: " . $_SESSION['username'] . "</p>";
+        } else {
+            header("Location: login.php?error=nao_autenticado");
+            exit();
+        }
+
+        if(isset($_GET['nome'])){
+            $_SESSION['nome'] = $_GET['nome'];
+            echo "<h2>Bem vindo, " . $_SESSION['nome'] . "</h2>";
+        }
+
+        if (isset($_GET['error']) && $_GET['error'] == 'faltando_dados') {
+            echo "<p style='color:red;'>Erro: Por favor, preencha todos os campos.</p>";
+        }
+
+        if (isset($_GET['error']) && $_GET['error'] == 'valores_invalidos') {
+            echo "<p style='color:red;'>Erro: Por favor, preencha os campos com valores válidos.</p>";
+        }
+    ?>
+    <form action="resultado.php" method="post">
         <label for="iname">Nome</label>
         <input type="text" id="iname" name="nome">
 
@@ -15,18 +39,12 @@
         <input type="text" id="iemail" name="email">
 
         <label for="ipeso">Peso</label>
-        <input type="float" id="ipeso" name="peso">
+        <input type="number" id="ipeso" name="peso" step="0.01">
 
         <label for="ialtura">Altura</label>
-        <input type="float" id="ialtura" name="altura">
+        <input type="number" id="ialtura" name="altura" step="0.01">
         
-        <input type="submit" value="Cadastrar">
+        <input type="submit" value="Calcular IMC">
     </form>
-    <?php
-        if (isset($_GET['nome'], $_GET['email'], $_GET['peso'], $_GET['altura'])) { ?>
-            <p>Nome: <?php echo $_GET['nome'] ?></p>
-            <p>Email: <?php echo $_GET['email'] ?></p>
-            <p>IMC: <?php echo $_GET['peso'] / $_GET['altura'] * $_GET['altura']?></p>
-    <?php } ?>
 </body>
 </html>
