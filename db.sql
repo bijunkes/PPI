@@ -4,12 +4,10 @@ FLUSH PRIVILEGES;
 USE `crud`;
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `nome` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL UNIQUE,
-  `telefone` varchar(15) NOT NULL,
-  `senha` varchar(255) NOT NULL,
-  `data_nascimento` DATE,
-  `data_cadastro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nome` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL UNIQUE,
+  `senha` VARCHAR(255) NOT NULL,
+  `telefone` VARCHAR(15) NOT NULL,
+  `data_nascimento` DATE NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
