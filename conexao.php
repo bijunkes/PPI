@@ -17,7 +17,7 @@
 
         return $stmt->execute();
     }
-    cadastra_usuario("b", "b", "123");
+    //cadastra_usuario("b", "b", "123");
 
     function delete_usuario($id) {
         $con = conecta_db();
@@ -28,4 +28,18 @@
         return $stmt->execute();
     }
     //delete_usuario(1);
+
+    function update_usuario($id, $nome, $email, $senha) {
+        $con = conecta_db();
+
+        $stmt = $con->prepare("UPDATE usuarios SET nome = :nome, email = :email, senha = :senha WHERE id = :id");
+
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':id', $id);
+
+        return $stmt->execute();
+    }
+    //update_usuario(2, "B", "b@", "123");
 ?>
