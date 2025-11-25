@@ -53,7 +53,7 @@
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    var_dump(get_usuario(2));
+    //var_dump(get_usuario(1));
 
     function get_usuarios() {
         $con = conecta_db();
@@ -63,5 +63,5 @@
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    var_dump(get_usuarios());
+    //var_dump(get_usuarios());
 ?>
