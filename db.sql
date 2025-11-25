@@ -6,8 +6,10 @@ USE `crud`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL UNIQUE,
+  `telefone` varchar(15) NOT NULL,
   `senha` varchar(255) NOT NULL,
+  `data_nascimento` DATE,
   `data_cadastro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
