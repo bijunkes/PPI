@@ -14,6 +14,27 @@
         return $stmt->execute();
     }
 
+    function logar($email, $senha) {
+        $con = conecta_db();
+        
+        $stmt = $con->prepare("SELECT * FROM usuarios WHERE email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($usuario && $senha === $usuario['senha']) {
+            $_SESSION['user_id'] = $usuario['id'];
+            $_SESSION['user_name'] = $usuario['nome'];
+            $_SESSION['user_email'] = $usuario['email'];
+            
+            return true;
+        }
+        
+        return false;
+    }
+
+
     function excluir($id) {
         $con = conecta_db();
         $stmt = $con->prepare("DELETE FROM usuarios WHERE id = :id");
