@@ -1,0 +1,12 @@
+O PHP é executado no navegador assim como o JavaScript? Explique.
+
+Não, eles funcionam de maneiras diferentes.
+
+O PHP é uma linguagem de servidor. Isso significa que ele é executado no servidor web, antes de a página ser enviada para o navegador do usuário.
+O código PHP é processado no servidor e só o resultado é enviado ao navegador.
+O navegador do usuário não vê o código PHP, apenas o HTML gerado por ele.
+O PHP é usado para interagir com bancos de dados, processar formulários, autenticar usuários, gerar conteúdo dinâmico e outras tarefas de back-end.
+
+O JavaScript é executado no navegador do usuários.
+Ele pode interagir com a página web, fazer requisições assíncronas, modificar o conteúdo HTML, entre outros, sem precisar voltar ao servidor.
+O código JS é enviado junto com a página web e o navegador interpreta e executa esse código enquanto o usuário interage com a página.

@@ -1,0 +1,13 @@
+Quais são as tags usadas para definição de código PHP?
+Escreva um exemplo de uso.
+
+<?php
+?>
+<?
+<?=
+
+Exemplo de uso:
+<?php
+    $nome = "Bianca";
+    echo "Olá, " . $nome . "!";
+?>
