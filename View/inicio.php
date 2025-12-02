@@ -50,11 +50,11 @@
         <h1>Projeto CRUD</h1>
     </header>
     <div>
-        <form action="cadastro.php" method="POST">
+        <form action="/view/cadastro.php" method="POST">
             <button type="submit">Cadastrar</button>
         </form>
         
-        <form action="login.php" method="POST">
+        <form action="/view/login.php" method="POST">
             <button type="submit">Entrar</button>
         </form>
     </div>

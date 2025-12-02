@@ -22,6 +22,14 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['excluir'])) {
+        if (excluir($usuario_id)) {
+            header("Location: usuarios.php");
+            exit();
+        } else {
+            echo "Erro ao excluir o usuário.";
+        }
+    } else {
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
@@ -35,6 +43,7 @@
             echo "Erro ao atualizar o usuário.";
         }
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -104,10 +113,27 @@
             border-radius: 5px;
             font-size: 16px;
             transition: background-color 0.3s;
+            border: 0
+        }
+
+        #excluir {
+            background-color: #ac4f4fff;
+        }
+        #excluir:hover {
+            background-color: #a04545ff;
+            cursor: pointer;
         }
 
         #voltar:hover, button:hover {
             background-color: #4565a0;
+            cursor: pointer;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
         }
 
         form {
@@ -151,9 +177,11 @@
         <label for="data_nascimento">Data de Nascimento:</label>
         <input type="date" id="data_nascimento" name="data_nascimento" value="<?php echo $usuario['data_nascimento']; ?>"><br><br>
 
-        <button type="submit">Salvar Alterações</button>
+        <div class="buttons-container">
+            <button id="excluir" type="submit" name="excluir" value="1">Excluir</button>
+            <button type="submit">Salvar</button>
+        </div>
     </form>
-    
     <br><br>
     <a id="voltar" href="usuarios.php">Voltar</a>
 </body>
